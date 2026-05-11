@@ -8,3 +8,8 @@ AMQP merupakan singkatan dari Advanced Message Queuing Protocol, dan AMQP itu se
 
 guest:guest@localhost:5672 merupakan URL tempat message broker dari AMQP yang kita gunakan. guest pertama merupakan username, dan guest kedua merupakan password default dari username tersebut (biasanya hanya dipakai untuk kebutuhan local). localhost:5672 menunjukkan address serta port yang digunakan.
 
+### Simulation slow subscriber
+
+![alt text](image.png)
+
+Pada grafik, terlihat bahwa queued message mencapai angka 6. Artinya, sempat ada 6 pesan yg ketahan di queue sebelum diproses. Hal ini terjadi karna tiap pesan ada delay 1 detik setiap pesan. 

@@ -7,11 +7,12 @@ pub struct UserCreatedEventMessage {
     pub user_name: String,
 }
 pub struct UserCreatedHandler;
+
 impl MessageHandler<UserCreatedEventMessage> for UserCreatedHandler {
     fn handle(&self, message: Box<UserCreatedEventMessage>) -> Result<(), HandleError> {
         let ten_millis = time::Duration::from_millis(1000);
         let now = time::Instant::now();
-        // thread::sleep(ten_millis);
+        thread::sleep(ten_millis);
         println!(
             "In Davin's Laptop [2406409504]. Message received: {:?}",
             message
